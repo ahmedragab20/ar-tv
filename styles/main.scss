@@ -1,0 +1,36 @@
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  // min-height: 1000vh;
+  background: $darkBackground;
+  color: $light;
+}
+
+a {
+  color: $dark;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// the scroll bar designing
+::-webkit-scrollbar {
+  width: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b4b4b4;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #414141;
+  border-radius: 7px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #434344;
+}

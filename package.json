@@ -1,0 +1,32 @@
+{
+  "name": "ar-tv",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "axios": "^0.24.0",
+    "bootstrap": "^5.0.2",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7",
+    "vue-carousel": "^0.18.0",
+    "vue-flux": "^6.4.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "fibers": "^5.0.0",
+    "prettier": "^2.3.2",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.43.3",
+    "sass-loader": "^10.2.0"
+  }
+}

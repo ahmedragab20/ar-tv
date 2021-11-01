@@ -1,0 +1,38 @@
+// Variablies
+$darkBackground: linear-gradient(170deg, #303030, #000000);
+$dark: #050505;
+$darkFaded: #050505bb;
+$light: #f1f1f1;
+$headlg: 3.5rem;
+$headsm: 1.7rem;
+$sm: 0.75rem;
+$full: 100%;
+$transition: all 0.4s ease-in-out;
+$darkShadow: 5px 5px 10px rgba(17, 17, 17, 0.5),
+  -5px -5px 10px rgba(17, 17, 17, 0.5);
+$lightShadow: 1px 1px 3px rgba(255, 252, 252, 0.5),
+  -1px -1px 3px rgba(255, 253, 253, 0.5);
+$blur: blur(5px);
+$txtShadow: 3px 3px 2px #000;
+$txtShadowLite: 1px 1px 1px #000;
+
+// Mixins
+
+@mixin center($column) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $column;
+}
+@mixin around($column) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: $column;
+}
+@mixin between($column) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $column;
+}
