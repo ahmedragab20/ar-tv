@@ -1,5 +1,5 @@
 <template>
-  <div class="favourites container pt-5">
+  <div class="favourites position-relative container py-5">
     <div v-if="items.length > 0">
       <div class="row">
         <div
@@ -17,20 +17,19 @@
       </div>
       <h6 class="my-3 section-title">You didn't add anything yet!</h6>
     </div>
-    <span
-      class="position-absolute bottom-0 py-2 section-title text-capitalize"
-      v-if="items.length > 1"
+    <figure
+      class="fav-items-length position-absolute bottom-0"
+      v-if="items.length >= 1"
     >
-      <i class="bi-heart-fill text-danger"></i> {{ items.length }} items in your
-      favourite list
-    </span>
-    <span
-      class="position-absolute bottom-0 py-2 section-title text-capitalize"
-      v-else
-    >
-      <i class="bi-heart-fill text-danger"></i> just one item in your favourite
-      list
-    </span>
+      <span class="section-title text-capitalize" v-if="items.length > 1">
+        <i class="bi-heart-fill text-danger"></i> {{ items.length }} items in
+        your favourite list
+      </span>
+      <span class="section-title text-capitalize" v-else>
+        <i class="bi-heart-fill text-danger"></i> just one item in your
+        favourite list
+      </span>
+    </figure>
   </div>
 </template>
 
