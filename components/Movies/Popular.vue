@@ -1,6 +1,6 @@
 <template>
-  <div class="movies">
-    <div class="movies-card m-2">
+  <div class="movies-popular">
+    <div class="film-card m-2">
       <div class="poster">
         <img
           :src="`${img_url}${item.poster_path}`"
@@ -50,8 +50,8 @@
       </div>
     </div>
     <div class="below m-2">
-      <h6 v-if="item.title">{{ item.title }}</h6>
-      <h6 v-else>Alternative Title</h6>
+      <h6 v-if="item.title" class="section-title">{{ item.title }}</h6>
+      <h6 v-else class="section-title">Alternative Title</h6>
       <p class="text-muted" v-if="item.release_date">{{ item.release_date }}</p>
       <!-- <p class="text-muted" v-if="item.first_air_date">
         {{ item.first_air_date }}
@@ -72,8 +72,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.movies {
-  .movies-card {
+.movies-popular {
+  .film-card {
     position: relative;
 
     &:hover {
@@ -112,7 +112,7 @@ export default {
       inset: 0;
       width: $full;
       height: $full;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: $liteDark;
       border: 4px solid #fff;
       backdrop-filter: $blur;
 

@@ -1,13 +1,15 @@
 <template>
   <div class="movies">
     <div class="popular container mt-5">
-      <div class="row">
-        <div
-          class="col-xl-3 col-lg-4 col-md-6"
-          v-for="item in popularMovie"
-          :key="item.id"
-        >
-          <MoviesPopular :item="item" />
+      <div v-if="!popularMovie.adults">
+        <div class="row">
+          <div
+            class="col-xl-3 col-lg-4 col-md-6"
+            v-for="item in popularMovie"
+            :key="item.id"
+          >
+            <MoviesPopular :item="item" />
+          </div>
         </div>
       </div>
     </div>
@@ -39,4 +41,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.movies {
+  min-height: 95vh;
+}
+</style>

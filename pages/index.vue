@@ -2,7 +2,7 @@
   <div class="Home">
     <HomeSlider />
     <div class="trending-container container mt-5">
-      <h2 class="text-center mb-3 text-muted">Trending Today</h2>
+      <h2 class="text-center mb-3 text-muted section-title">Trending Today</h2>
       <div class="row">
         <div
           class="col-xl-3 col-lg-4 col-md-6"

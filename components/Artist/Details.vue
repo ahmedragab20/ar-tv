@@ -2,17 +2,19 @@
   <div class="details mt-3">
     <div class="context">
       <div class="title">
-        <h2 v-if="item.name.length < 20" class="h1 fw-bold">{{ item.name }}</h2>
-        <h3 v-else class="fw-bold">{{ item.name }}</h3>
+        <h2 v-if="item.name.length < 20" class="h1 fw-bold section-title">
+          {{ item.name }}
+        </h2>
+        <h3 v-else class="fw-bold section-title">{{ item.name }}</h3>
         <span class="text-muted">{{ item.known_for_department }}</span>
-        <p class="text-muted fst-italic" v-if="item.birthday">
+        <p class="text-muted fst-italic section-title" v-if="item.birthday">
           {{ item.birthday }}
         </p>
-        <p class="text-muted fst-italic" v-if="item.deathday">
+        <p class="text-muted fst-italic section-title" v-if="item.deathday">
           - {{ item.deathday }}
         </p>
       </div>
-      <div class="bio my-3">
+      <div class="bio my-3 section-title">
         <p>{{ item.biography }}</p>
       </div>
     </div>
@@ -42,10 +44,5 @@ export default {
       }
     }
   }
-}
-/* Media Query */
-@media (max-width: 768px) {
-}
-@media (max-width: 320px) {
 }
 </style>

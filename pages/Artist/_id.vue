@@ -4,10 +4,10 @@
     <div class="details-images-container">
       <div class="row">
         <div class="col-md-6">
-          <ArtistDetails :item="artistDetailsData" />
+          <ArtistImages />
         </div>
         <div class="col-md-6">
-          <ArtistImages />
+          <ArtistDetails :item="artistDetailsData" />
         </div>
       </div>
     </div>

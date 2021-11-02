@@ -3,11 +3,33 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  // min-height: 1000vh;
-  background: $darkBackground;
   color: $light;
 }
+.layout.lightMode {
+  background: $lightBackground;
 
+  .mode {
+    span {
+      transform: translateX(25px) scale(1);
+      color: #111;
+    }
+  }
+
+  .section-title {
+    color: $lightModeHeaderColor !important;
+    text-shadow: none !important;
+  }
+  .film-card {
+    .context {
+      background: $liteLight !important;
+    }
+  }
+  footer {
+    * {
+      color: $dark;
+    }
+  }
+}
 a {
   color: $dark;
   text-decoration: none;

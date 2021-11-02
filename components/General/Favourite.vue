@@ -1,6 +1,6 @@
 <template>
   <div class="favourite" v-if="item.id">
-    <div class="favourite-card m-2">
+    <div class="film-card m-2">
       <div class="poster">
         <img
           :src="`${img_url}${item.poster_path}`"
@@ -47,8 +47,8 @@
       </div>
     </div>
     <div class="below m-2">
-      <h6 v-if="item.title">{{ item.title }}</h6>
-      <h6 v-else>Alternative Title</h6>
+      <h6 v-if="item.title" class="section-title">{{ item.title }}</h6>
+      <h6 v-else class="section-title">Alternative Title</h6>
       <p class="text-muted" v-if="item.release_date">
         {{ item.release_date }}
       </p>
@@ -80,7 +80,7 @@ export default {
 
 <style lang="scss" scoped>
 .favourite {
-  .favourite-card {
+  .film-card {
     position: relative;
 
     &:hover {
@@ -119,8 +119,8 @@ export default {
       inset: 0;
       width: $full;
       height: $full;
-      background-color: rgba(0, 0, 0, 0.5);
-      border: 4px solid #fff;
+      background-color: $liteDark;
+      border: 4px solid $light;
       backdrop-filter: $blur;
 
       .btn {

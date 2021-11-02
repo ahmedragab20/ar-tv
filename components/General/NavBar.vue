@@ -104,7 +104,7 @@ export default {
 nav {
   @include between(row);
   z-index: 998;
-  background-color: #333333b4;
+  background-color: $liteDarkBackground;
   backdrop-filter: blur(10px);
 
   .logo {

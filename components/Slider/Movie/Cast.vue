@@ -10,12 +10,12 @@
             v-else
           />
           <h4
-            class="text-capitalize mt-1"
+            class="text-capitalize mt-2 section-title"
             v-if="item.original_name.length <= 13"
           >
             {{ item.original_name }}
           </h4>
-          <h4 class="text-capitalize mt-1 text-text-muted" v-else>
+          <h4 class="text-capitalize mt-2 text-text-muted section-title" v-else>
             {{ item.original_name.substring(0, 13) }}...
           </h4>
           <!-- <div class="context">

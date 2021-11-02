@@ -11,11 +11,11 @@
         </div>
       </div>
     </div>
-    <div v-else class="text-center mt-5">
-      <div class="image">
+    <div v-else class="text-center pt-5">
+      <div class="image mt-3">
         <img src="~/assets/empty.webp" alt="empty list" class="img-fluid" />
       </div>
-      <h6 class="my-3">You didn't add anything yet!</h6>
+      <h6 class="my-3 section-title">You didn't add anything yet!</h6>
     </div>
   </div>
 </template>

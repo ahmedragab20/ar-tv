@@ -5,7 +5,10 @@
       <SliderShowDetails :item="showsDetailsData" />
       <!-- Tv show Videos -->
       <div class="shows-videos container">
-        <h2 class="text-center fw-bold text-muted mt-5" v-if="showsVideosData">
+        <h2
+          class="text-center fw-bold text-muted mt-5 section-title"
+          v-if="showsVideosData"
+        >
           Some Videos
         </h2>
         <div class="row">
@@ -25,7 +28,7 @@
             <!-- Tv Show Images -->
             <div class="show-images container">
               <h2
-                class="text-center fw-bold text-muted mt-5"
+                class="text-center fw-bold text-muted mt-5 section-title"
                 v-if="showsImagesData"
               >
                 Some Images
@@ -43,7 +46,7 @@
           </div>
           <div class="col-md-6">
             <!-- Tv Show Cast -->
-            <div class="shows-cast container text-capitalize">
+            <div class="shows-cast container text-capitalize section-title">
               <h2
                 class="text-center fw-bold text-muted mt-4"
                 v-if="showsCastData"

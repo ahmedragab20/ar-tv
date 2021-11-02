@@ -5,7 +5,10 @@
       <SliderMovieDetails :item="moviesDetailsData" />
       <!-- Movie Videos -->
       <div class="movies-videos container">
-        <h2 class="text-center fw-bold text-muted mt-5" v-if="moviesVideosData">
+        <h2
+          class="text-center fw-bold text-muted mt-5 section-title"
+          v-if="moviesVideosData"
+        >
           Some Videos
         </h2>
         <div class="row">
@@ -27,7 +30,7 @@
             <!-- Movies Images -->
             <div class="movies-images container">
               <h2
-                class="text-center fw-bold text-muted mt-5"
+                class="text-center fw-bold text-muted mt-5 section-title"
                 v-if="moviesImagesData"
               >
                 Some Images
@@ -47,7 +50,7 @@
             <!-- Movie Cast -->
             <div class="movies-cast container text-capitalize">
               <h2
-                class="text-center fw-bold text-muted mt-5"
+                class="text-center fw-bold text-muted mt-5 section-title"
                 v-if="moviesCastData"
               >
                 The Cast

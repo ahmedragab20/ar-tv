@@ -1,11 +1,13 @@
 <template>
-  <div class="search container mt-5">
-    <h2 class="text-center">You can here find anything you want!</h2>
+  <div class="search container pt-5">
+    <h2 class="text-center section-title">
+      You can here find anything you want!
+    </h2>
 
-    <form @submit.prevent="pressed" class="mt-2 mb-4">
+    <form @submit.prevent="pressed" class="my-2 mb-4">
       <input
         type="text"
-        class="form-control rounded-0 text-center"
+        class="form-control rounded-0 text-center section-title"
         id="exampleFormControlInput1"
         placeholder="Search..."
         v-model="inputText"
@@ -13,7 +15,7 @@
         autocomplete="off"
       />
     </form>
-    <div class="search-results" v-if="inputText">
+    <div class="search-results mt-5" v-if="inputText">
       <div class="row">
         <div
           class="col-xl-3 col-lg-4 col-md-6"

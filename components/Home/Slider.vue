@@ -171,9 +171,9 @@ export default {
           box-shadow: $darkShadow;
 
           &:hover {
-            color: #fff;
-            background-color: #000;
-            border: 1px solid #000;
+            color: $light;
+            background-color: $dark;
+            border: 1px solid $dark;
           }
         }
       }
