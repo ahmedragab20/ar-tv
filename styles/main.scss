@@ -19,6 +19,10 @@ body {
     color: $lightModeHeaderColor !important;
     text-shadow: none !important;
   }
+  .production-name {
+    color: #000;
+    text-shadow: -0.5px -0.5px 1px #111;
+  }
   .film-card {
     .context {
       background: $liteLight !important;

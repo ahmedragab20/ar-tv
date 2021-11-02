@@ -80,8 +80,11 @@
                             v-else
                           />
                         </div>
-                        <div class="name">
-                          <p>{{ production.name }}</p>
+                        <div class="name production-name">
+                          <p v-if="production.name.length > 15">
+                            {{ production.name.substring(0, 15) }}...
+                          </p>
+                          <p v-else>{{ production.name }}</p>
                         </div>
                       </div>
                     </slide>

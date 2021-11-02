@@ -56,7 +56,7 @@
                       v-for="production in production_companies"
                       :key="production.id"
                     >
-                      <div class="production-card">
+                      <div class="production-card overflow-hidden">
                         <div class="img">
                           <img
                             :src="`${img_url}${production.logo_path}`"
@@ -71,8 +71,11 @@
                             v-else
                           />
                         </div>
-                        <div class="name">
-                          <p>{{ production.name }}</p>
+                        <div class="name production-name">
+                          <p v-if="production.name.length > 15">
+                            {{ production.name.substring(0, 15) }}...
+                          </p>
+                          <p v-else>{{ production.name }}</p>
                         </div>
                       </div>
                     </slide>
