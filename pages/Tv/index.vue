@@ -1,6 +1,6 @@
 <template>
   <div class="show">
-    <div class="popular container mt-5">
+    <div class="popular container pt-5">
       <div v-if="!popularShow.adults">
         <div class="row">
           <div

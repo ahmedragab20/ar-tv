@@ -1,7 +1,7 @@
 <template>
   <div class="Home">
     <HomeSlider />
-    <div class="trending-container container mt-5">
+    <div class="trending-container container pt-5">
       <h2 class="text-center mb-3 text-muted section-title">Trending Today</h2>
       <div class="row">
         <div

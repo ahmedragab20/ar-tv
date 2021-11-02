@@ -1,5 +1,5 @@
 <template>
-  <div class="favourites container mt-5">
+  <div class="favourites container pt-5">
     <div v-if="items.length > 0">
       <div class="row">
         <div

@@ -1,5 +1,5 @@
 <template>
-  <div class="artist container mt-5">
+  <div class="artist container pt-5">
     <!-- Details and Images -->
     <div class="details-images-container">
       <div class="row">
