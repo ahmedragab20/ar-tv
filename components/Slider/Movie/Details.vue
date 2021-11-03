@@ -2,7 +2,16 @@
   <div class="details container">
     <div class="overlay">
       <div class="img">
-        <img :src="`${img_url}${item.backdrop_path}`" alt="background image" />
+        <img
+          v-if="item.backdrop_path"
+          :src="`${img_url}${item.backdrop_path}`"
+          alt="background image"
+        />
+        <img
+          v-else
+          src="`https://picsum.photos/1080/768"
+          alt="background image"
+        />
       </div>
     </div>
     <div class="row position-relative">

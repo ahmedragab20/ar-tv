@@ -1,5 +1,5 @@
 <template>
-  <div class="search-results">
+  <div class="search-results mt-3">
     <div class="film-card m-2">
       <div class="poster">
         <img
@@ -58,7 +58,7 @@
     </div>
     <div class="below m-2">
       <h6 v-if="item.title" class="section-title">{{ item.title }}</h6>
-      <h6 v-else class="section-title">Alternative Title</h6>
+      <h6 v-else class="section-title">{{ item.name }}</h6>
       <p class="text-muted" v-if="item.first_air_date">
         {{ item.first_air_date }}
       </p>

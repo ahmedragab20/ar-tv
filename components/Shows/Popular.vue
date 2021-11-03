@@ -3,9 +3,15 @@
     <div class="film-card m-2">
       <div class="poster">
         <img
+          v-if="item.poster_path"
           :src="`${img_url}${item.poster_path}`"
           :alt="item.original_title"
           class="img-fluid rounded-3 shadow-lg"
+        />
+        <img
+          v-else
+          src="`https://picsum.photos/1080/768"
+          alt="background image"
         />
         <span>{{ item.original_language }}</span>
       </div>
@@ -51,7 +57,7 @@
     </div>
     <div class="below m-2">
       <h6 v-if="item.title" class="section-title">{{ item.title }}</h6>
-      <h6 v-else class="section-title">Alternative Title</h6>
+      <h6 v-else class="section-title">{{ item.name }}</h6>
       <p class="text-muted" v-if="item.first_air_date">
         {{ item.first_air_date }}
       </p>

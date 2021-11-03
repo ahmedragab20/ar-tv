@@ -41,10 +41,6 @@
             </h2>
           </div>
         </div>
-        <!-- If the api has value for the type of the data (movie or tv)
-             then we would be able to make `/slider` also dynamic and then
-             we wouldn't had to call tow apis
-        -->
         <nuxt-link
           :to="`${item.media_type}/${item.id}`"
           class="btn btn-light px-3 btn-sm rounded-pill"
@@ -55,7 +51,7 @@
     </div>
     <div class="below m-2">
       <h6 v-if="item.title" class="section-title">{{ item.title }}</h6>
-      <h6 v-else class="section-title">Alternative Title</h6>
+      <h6 v-else class="section-title">{{ item.name }}</h6>
       <p class="text-muted" v-if="item.release_date">{{ item.release_date }}</p>
       <p class="text-muted" v-if="item.first_air_date">
         {{ item.first_air_date }}

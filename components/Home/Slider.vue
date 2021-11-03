@@ -43,7 +43,7 @@
                   </div>
                   <div class="d-none d-md-block lg-txt">
                     <h2 v-if="item.title">{{ item.title }}</h2>
-                    <h2 v-else>Alternative Title</h2>
+                    <h2 v-else>{{ item.name }}</h2>
                     <h6 class="text-muted btn-sm fst-italic">
                       {{ item.release_date }}
                     </h6>
@@ -51,7 +51,7 @@
                   </div>
                   <div class="d-block d-md-none sm-txt">
                     <h2 v-if="item.title">{{ item.title }}</h2>
-                    <h2 v-else>Alternative Title</h2>
+                    <h2 v-else>{{ item.name }}</h2>
                     <p>{{ item.overview.substring(0, 110) }}...</p>
                   </div>
 
