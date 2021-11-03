@@ -71,7 +71,7 @@ export default {
       height: 115px;
       margin: auto;
       cursor: pointer;
-      transition: 0.3s;
+      transition: $transition;
 
       &:hover {
         transform: scale(1.1);

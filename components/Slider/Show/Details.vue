@@ -40,6 +40,9 @@
                 <p class="text-capitalize">{{ item.original_language }}</p>
               </div>
             </div>
+            <div class="tagline mb-1">
+              <span>{{ item.tagline }}</span>
+            </div>
             <div class="underheader d-flex gap-2">
               <div class="rate d-flex">
                 <div class="d-flex" v-if="item.vote_average > 7">
@@ -63,9 +66,20 @@
               </div>
             </div>
             <div class="overview mt-3 mb-1">
-              <p>{{ item.overview }}</p>
+              <p :class="{ smTxt: isLong }">
+                {{ item.overview.substring(0, 200) }}
+                <span v-if="smTxt" @click.self="readmore" class="text-muted">
+                  ...Readmore
+                </span>
+              </p>
+              <p v-if="isLong">
+                {{ item.overview }}
+                <span v-if="isLong" @click.self="readmore" class="text-muted">
+                  ...Readless
+                </span>
+              </p>
             </div>
-            <div class="production">
+            <div class="production" v-if="production_companies.length > 0">
               <h6>Production Companies</h6>
               <figure>
                 <client-only>
@@ -156,6 +170,7 @@ export default {
       dismissCountDown: 0,
       showDismissibleAlert: false,
       isAdded: false,
+      isLong: false,
       options: {
         loop: true,
         perPage: 4,
@@ -177,6 +192,9 @@ export default {
     production_companies() {
       return this.item.production_companies
     },
+    smTxt() {
+      return this.item.overview.length > 200
+    },
   },
   methods: {
     addToFavourie(dismissCountDown) {
@@ -190,6 +208,9 @@ export default {
     },
     showAlert() {
       this.dismissCountDown = this.dismissSecs
+    },
+    readmore() {
+      this.isLong = !this.isLong
     },
   },
 }
@@ -255,7 +276,17 @@ export default {
       }
 
       .overview {
-        font-size: $sm;
+        p {
+          font-size: $sm;
+
+          &.smTxt {
+            display: none;
+          }
+
+          span {
+            cursor: pointer;
+          }
+        }
       }
 
       .production {

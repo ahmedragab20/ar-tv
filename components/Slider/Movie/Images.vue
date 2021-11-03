@@ -1,10 +1,5 @@
 <template>
   <div class="images my-2">
-    <!-- Images Model Block -->
-    <!-- <div>
-      <GeneralImagesModel />
-    </div> -->
-
     <div class="image-container">
       <img
         :src="img"
@@ -37,4 +32,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.image-container {
+  img {
+    transition: $transition;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+</style>

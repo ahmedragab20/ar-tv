@@ -19,7 +19,10 @@ export default {
 
   css: ['@/styles/main.scss'],
 
-  plugins: [{ src: '~/plugins/vue-carousel', mode: 'client' }],
+  plugins: [
+    { src: '~/plugins/vue-carousel', mode: 'client' },
+    { src: '~/plugins/vue-gallery', mode: 'client' },
+  ],
 
   components: true,
 
