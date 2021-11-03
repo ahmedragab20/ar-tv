@@ -17,7 +17,7 @@
             <div class="title d-flex gap-2">
               <h2
                 class="my-1 fw-bold text-uppercase"
-                v-if="item.title.length <= 20"
+                v-if="item.title.length < 20"
               >
                 {{ item.title }}
               </h2>
@@ -57,6 +57,7 @@
               <p>{{ item.overview }}</p>
             </div>
             <div class="production">
+              <h6>Production Companies</h6>
               <figure>
                 <client-only>
                   <carousel v-bind="options" class="position-relative">
@@ -79,12 +80,6 @@
                             width="80"
                             v-else
                           />
-                        </div>
-                        <div class="name production-name">
-                          <p v-if="production.name.length > 15">
-                            {{ production.name.substring(0, 15) }}...
-                          </p>
-                          <p v-else>{{ production.name }}</p>
                         </div>
                       </div>
                     </slide>
@@ -254,31 +249,26 @@ export default {
         font-size: $sm;
       }
 
-      .production-card {
-        border: 1px solid #d1d1d163;
-        margin: 5px 20px;
-        padding: 5px;
-        min-height: 150px;
-        text-align: center;
-        border-radius: 10px;
-        position: relative;
-
-        .img {
-          height: 90px;
-          @include center(row);
-          img {
-            width: 77px;
-            height: 77px;
-            object-fit: contain;
-            border-radius: 10px;
-          }
+      .production {
+        h6 {
+          text-shadow: $txtShadow;
         }
 
-        p {
-          position: absolute;
-          bottom: 0px;
-          font-size: $sm;
-          width: $full - 10;
+        .production-card {
+          margin: 5px 0;
+          position: relative;
+
+          .img {
+            @include center(row);
+            width: 80px;
+            height: 80px;
+            img {
+              width: $full;
+              height: $full;
+              object-fit: contain;
+              border-radius: 10px;
+            }
+          }
         }
       }
 
