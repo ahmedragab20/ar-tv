@@ -29,10 +29,7 @@
           <div class="col-md-6">
             <!-- Movies Images -->
             <div class="movies-images container">
-              <h2
-                class="text-center fw-bold text-muted mt-5 section-title"
-                v-if="moviesImagesData"
-              >
+              <h2 class="text-center fw-bold text-muted mt-5 section-title">
                 Some Images
               </h2>
               <div class="row">

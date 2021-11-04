@@ -21,7 +21,6 @@ export default {
   data() {
     return {
       img_url: 'https://image.tmdb.org/t/p/w500',
-      showModel: false,
     }
   },
   computed: {

@@ -26,8 +26,16 @@ export const state = () => ({
   ArtistLastWork: [],
 
   // Search
-  SearchResults: []
+  SearchResults: [],
 })
+
+// export const getters = {
+//   movieImagesGetter(state) {
+//     state.MovieImages.forEach((item) => {
+//       return item
+//     })
+//   },
+// }
 
 export const mutations = {
   // Shows
